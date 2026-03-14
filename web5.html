@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCM Victory | AI Mathematics Platform</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body{background:#f4f6f8;color:#1e272e}
+
+header{background:#0f4c81;color:white;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
+nav a{color:white;margin-left:22px;text-decoration:none;font-weight:bold;font-size:15px}
+nav a:hover{opacity:.8}
+
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+
+.hero{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:80px 40px;background:linear-gradient(120deg,#0f4c81,#2a9df4);color:white;flex-wrap:wrap}
+.hero img.logo-main{width:150px;margin-bottom:20px}
+.hero-images{display:flex;flex-direction:column;gap:15px}
+.hero-images img{width:170px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.3)}
+.hero h1{font-size:46px;margin-bottom:10px}
+.hero p{font-size:20px;margin-bottom:25px}
+
+.btn{background:#ff7a00;border:none;padding:14px 26px;font-size:16px;color:white;border-radius:8px;cursor:pointer}
+
+.section{padding:70px 20px;max-width:1100px;margin:auto}
+.section h2{text-align:center;margin-bottom:40px;font-size:32px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:white;padding:28px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.08);transition:.2s}
+.card:hover{transform:translateY(-5px)}
+.card h3{margin-bottom:10px}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.feature{background:white;padding:25px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.07)}
+
+.ai{background:#eef6ff;border-left:6px solid #2a9df4;padding:40px;border-radius:10px;line-height:1.6}
+
+.practice-box{background:white;padding:30px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08);text-align:center}
+.practice-box select,.practice-box button{padding:10px;margin:10px}
+
+.test-box{background:white;padding:30px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08);text-align:center}
+
+.login-box{max-width:400px;margin:auto;background:white;padding:30px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.login-box input{width:100%;padding:10px;margin:10px 0}
+
+.about{line-height:1.7;font-size:17px}
+
+.contact-box{text-align:center;background:white;padding:30px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+
+footer{margin-top:60px;background:#0f4c81;color:white;text-align:center;padding:20px}
+
+@media(max-width:700px){
+.hero h1{font-size:36px}
+.hero p{font-size:17px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="logo.png" alt="PCM Victory Logo">
+<h2>PCM Victory</h2>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#courses">Courses</a>
+<a href="#ai">AI Tutor</a>
+<a href="#practice">Practice</a>
+<a href="#tests">Tests</a>
+<a href="#videos">YouTube</a>
+<a href="#demo">Demo Class</a>
+<a href="#login">Login</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div>
+<img class="logo-main" src="logo.png" alt="PCM Victory Logo">
+<h1>PCM Victory</h1>
+<p>AI Powered Mathematics Learning Platform</p>
+<button class="btn">Start Learning</button>
+</div>
+
+<div class="hero-images">
+<img <img src="./teacher1.jpg"> alt="Math Teacher">
+<img <img src="./teacher2.jpg"> alt="PCM Victory Founder">
+</div>
+
+</section>
+
+
+<section class="section" id="courses">
+<h2>Courses</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Class 10 Mathematics</h3>
+<p>Concept based learning for CBSE exams with practice questions.</p>
+</div>
+
+<div class="card">
+<h3>Class 11 Mathematics</h3>
+<p>Strong foundation in algebra, trigonometry and calculus basics.</p>
+</div>
+
+<div class="card">
+<h3>Class 12 Mathematics</h3>
+<p>Board preparation with concept clarity and exam practice.</p>
+</div>
+
+<div class="card">
+<h3>JEE Mathematics</h3>
+<p>Advanced level mathematics and competitive exam preparation.</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="ai">
+<h2>PCM Victory AI Tutor</h2>
+
+<div class="ai">
+<p>
+PCM Victory AI Tutor helps students solve mathematics problems step-by-step.
+Students can ask questions, understand concepts, and generate unlimited practice problems.
+
+Future features include concept detection, smart practice generation, and AI doubt solving.
+</p>
+</div>
+
+</section>
+
+
+<section class="section" id="practice">
+<h2>Practice Questions</h2>
+
+<div class="practice-box">
+
+<p>Select a chapter to generate practice questions.</p>
+
+<select id="chapterSelect">
+<option value="quadratic">Quadratic Equations</option>
+<option value="relations">Relations and Functions</option>
+<option value="trigonometry">Trigonometry</option>
+<option value="calculus">Calculus</option>
+</select>
+
+<br>
+
+<button class="btn" onclick="generateQuestion()">Generate Practice</button>
+
+<p id="questionBox" style="margin-top:20px;font-weight:bold"></p>
+
+</div>
+
+</section>
+
+<script>
+
+const questionBank = {
+
+quadratic:[
+"Solve: x^2 - 5x + 6 = 0",
+"Solve: x^2 - 7x + 10 = 0",
+"Find roots of: x^2 - 9 = 0"
+],
+
+relations:[
+"Check if relation R={(1,1),(2,2),(3,3)} is reflexive",
+"Is the relation symmetric? R={(1,2),(2,1)}",
+"Define transitive relation with example"
+],
+
+trigonometry:[
+"Find value of sin^2θ + cos^2θ",
+"Evaluate: tan45°",
+"Find sin30°"
+],
+
+calculus:[
+"Find derivative of x^2",
+"Find derivative of sinx",
+"Differentiate: 3x^3"
+]
+
+}
+
+function generateQuestion(){
+
+let chapter = document.getElementById("chapterSelect").value
+
+let list = questionBank[chapter]
+
+let q = list[Math.floor(Math.random()*list.length)]
+
+
+
+document.getElementById("questionBox").innerText = q
+
+}
+
+</script>
+
+
+<section class="section" id="tests">
+<h2>Chapter Tests</h2>
+
+<div class="test-box">
+
+<p>Test your mathematics knowledge with chapter based tests.</p>
+
+<button class="btn">Start Test</button>
+
+</div>
+
+</section>
+
+
+<section class="section" id="login">
+<h2>Student Login</h2>
+
+<div class="login-box">
+
+<input type="text" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<button class="btn" style="width:100%">Login</button>
+
+</div>
+
+</section>
+
+
+<section class="section" id="about">
+<h2>About PCM Victory</h2>
+
+<div class="about">
+<p>
+PCM Victory is a mathematics education initiative focused on building strong conceptual understanding.
+
+Our mission is to combine traditional mathematics teaching with artificial intelligence to create a powerful learning platform.
+
+Students can learn concepts, practice questions, take tests, and use AI tools to improve their mathematical thinking.
+</p>
+</div>
+
+</section>
+
+
+<section class="section" id="contact">
+<h2>Contact</h2>
+
+<div class="contact-box">
+
+<p><strong>Email:</strong> pcmvictory@gmail.com</p>
+<p><strong>WhatsApp:</strong> +91 XXXXX XXXXX</p>
+<p><strong>Institute:</strong> PCM Victory Classes</p>
+
+</div>
+
+</section>
+
+
+
+<section class="section" id="videos">
+<h2>YouTube Classes</h2>
+
+<p style="text-align:center;margin-bottom:30px">Watch latest lectures from PCM Victory YouTube channel.</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Latest Mathematics Lecture</h3>
+<iframe width="100%" height="220" src="https://www.youtube.com/embed?listType=user_uploads&list=PCMVICTORY" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="card">
+<h3>Relations & Functions Full Lecture</h3>
+<iframe width="100%" height="220" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="card">
+<h3>JEE Mathematics Strategy</h3>
+<iframe width="100%" height="220" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="demo">
+<h2>Free Demo Class</h2>
+
+<div class="login-box" style="text-align:center">
+
+<p>Watch a free demo class from PCM Victory.</p>
+
+<iframe width="100%" height="250" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demo Video" frameborder="0" allowfullscreen></iframe>
+
+<p style="margin-top:15px">If you like the demo class, join PCM Victory Courses.</p>
+
+<button class="btn">Join Course</button>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 PCM Victory | Learn • Solve • Succeed</p>
+</footer>
+
+
+<section class="section" id="dashboard">
+<h2>Student Dashboard</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>My Courses</h3>
+<p>View the courses you are enrolled in such as Class 10, 11, 12 or JEE Mathematics.</p>
+<button class="btn">Open Courses</button>
+</div>
+
+<div class="card">
+<h3>Practice Progress</h3>
+<p>Track how many practice questions you solved and your accuracy.</p>
+<button class="btn">View Progress</button>
+</div>
+
+<div class="card">
+<h3>Test Scores</h3>
+<p>Check your chapter test scores and performance analysis.</p>
+<button class="btn">View Results</button>
+</div>
+
+<div class="card">
+<h3>AI Doubt Solver</h3>
+<p>Ask mathematics questions and get step‑by‑step solutions.</p>
+<button class="btn">Ask AI</button>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="section" id="admin">
+<h2>Admin Panel</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Add Questions</h3>
+<p>Upload mathematics questions by class, chapter, and difficulty level.</p>
+<button class="btn">Upload Question</button>
+</div>
+
+<div class="card">
+<h3>Create Tests</h3>
+<p>Generate chapter tests or mock exams for students.</p>
+<button class="btn">Create Test</button>
+</div>
+
+<div class="card">
+<h3>Student Management</h3>
+<p>View registered students, track progress, and manage accounts.</p>
+<button class="btn">Manage Students</button>
+</div>
+
+<div class="card">
+<h3>Analytics</h3>
+<p>View platform performance, student results, and learning analytics.</p>
+<button class="btn">View Analytics</button>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
